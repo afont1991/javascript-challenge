@@ -27,6 +27,13 @@ button.on("click", function() {
     // Get the value property of the input element
     var inputElementValue = inputElement.property("value");
     console.log(inputElementValue);
+    // displaying value in HTML
+    var newElement = document.createElement("p");
+    var text = document.createTextNode(inputElementValue);
+    para.appendChild(node);
+
+    var element = document.getElementById("valueDisplay");
+    element.appendChild(newElement);
     // filter data 
     var inputFilter = data.filter((obj) =>{
         return obj.datetime == inputElementValue;
